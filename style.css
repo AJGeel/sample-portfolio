@@ -1,0 +1,254 @@
+:root {
+  --main-branding: hsl(233, 93%, 41%);
+  --main-branding: hsl(6, 77%, 58%);
+}
+
+::selection {
+    background: hsla(6, 77%, 58%, .1);
+}
+
+
+@keyframes fadeInBottom {
+    from {
+        margin-top: 1em;
+        opacity: 0;
+        filter: blur(2px);
+    }
+
+    to {
+        margin-top: 0em;
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+body {
+  background-color: #efefef;
+  background-color: #fffcf2;
+  font-family: "BentonSans", "Nunito", sans-serif;
+
+  animation: fadeInBottom .5s ease-in-out;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  /* border: 1px solid red; */
+  padding: 3em;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #888;
+  margin: 0em 2em;
+  font-size: .85em;
+  transition: color .2s ease-in-out;
+}
+
+nav a.active {
+  color: #000;
+}
+
+nav a:hover {
+  color: var(--main-branding);
+  /* text-decoration: underline; */
+}
+
+.intro h1 {
+  font-size: 2.8em;
+  line-height: 140%;
+  font-weight: lighter;
+  font-family: "Futura", "Lato", sans-serif;
+  max-width: 1000px;
+  text-align: center;
+  color: #666;
+  margin: 3em;
+}
+
+.intro.case-study h1 {
+  margin: 1em 3em;
+}
+
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-grid .grid_thumbnail {
+  margin: 3em 3em;
+  width: 600px;
+  /* border: 1px solid red; */
+  padding: 1em;
+  border-radius: 5px;
+
+  transition: background-color .3s ease-in-out, transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.item-grid .grid_thumbnail:hover {
+  transform: translateY(-.5em);
+}
+
+.item-grid a {
+  text-decoration: none;
+  color: initial;
+}
+
+.item-grid .grid_thumbnail h2 {
+  font-size: 1.2em;
+  margin-bottom: .4em;
+}
+
+.item-grid .grid_thumbnail p {
+  opacity: .7;
+  font-size: .9em;
+}
+
+.item-grid .grid_thumbnail h2, .item-grid .grid_thumbnail p {
+  text-align: center;
+  color: #333;
+  transition: color .3s ease-in-out;
+}
+
+.item-grid .grid_thumbnail img {
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.item-grid .grid_thumbnail:hover h2 {
+  color: var(--main-branding);
+}
+
+article.case-study {
+  max-width: 1000px;
+  /* border: 1px solid red; */
+  margin-bottom: 3em;
+}
+
+article.case-study .hero-image {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+article.case-study img.non-hero {
+  max-width: 100%;
+  padding: 0px 140px;
+  margin: 5em 0em;
+}
+
+article.case-study h2, article.case-study p {
+  padding: 0px 140px;
+  margin-bottom: 1.5em;
+}
+
+article.case-study h2 {
+  font-family: "Futura", "Lato", sans-serif;
+  color: #666;
+  font-size: 1.6em;
+  line-height: 140%;
+  font-weight: 300;
+}
+
+article.case-study p {
+  font-size: 1.1em;
+  line-height: 180%;
+  color: #666;
+}
+
+article.case-study .other-projects {
+  text-align: center;
+  margin: 6em 0;
+}
+
+article.case-study .other-projects h3 {
+  font-size: 1.5em;
+  font-family: "Futura", "Lato", sans-serif;
+  font-weight: 300;
+  color: #333;
+  margin: 1em 0em;
+}
+
+article.case-study .other-projects .other-projects-grid {
+  display: flex;
+}
+
+article.case-study .other-projects .other-projects-grid a{
+  margin: 0 1em;
+  text-decoration: none;
+
+  transition: transform .3s ease-in-out;
+}
+
+article.case-study .other-projects .other-projects-grid a h4{
+  color: #666;
+  margin: .5em 0;
+
+  transition: color .3s ease-in-out;
+}
+
+article.case-study .other-projects .other-projects-grid img {
+  max-width: 100%;
+}
+
+article.case-study .other-projects .other-projects-grid a:hover{
+  transform: translateY(-.4em);
+}
+
+article.case-study .other-projects .other-projects-grid a:hover h4{
+  color: var(--main-branding);
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .socials {
+  align-items: center;
+}
+
+footer .socials a {
+  margin: 0 1em;
+}
+
+footer .socials a img {
+  /* max-width: 2em; */
+  opacity: .2;
+
+  transition: opacity .2s ease-in-out;
+}
+
+footer .socials a img:hover {
+  opacity: 1;
+}
+
+footer .copyright {
+  display: flex;
+}
+
+footer .copyright p {
+  font-size: .9em;
+  margin: 3em;
+  opacity: .6;
+}
+
+footer .copyright a {
+  color: initial;
+  transition: color .2s ease-in-out;
+}
+
+footer .copyright a:hover {
+  color: var(--main-branding);
+}
